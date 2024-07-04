@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.global-image {
+  width: 100%;
+  height: auto;
+}
+
+.map {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(5, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.map-row {
+  display: contents;
+}
+
+.map-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.shape {
+  width: 80px;
+  height: 80px;
+}
+
+.square {
+  background-color: red;
+}
+
+.circle {
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.selected {
+  border: 3px solid blue;
+}

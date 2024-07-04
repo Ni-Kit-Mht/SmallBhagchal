@@ -1,0 +1,63 @@
+/* src/Map.css */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.map {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.cell-wrapper {
+  width: 100%;
+  padding-top: 100%; /* This creates a responsive square cell */
+  position: relative; /* Needed for positioning the shape inside */
+}
+
+.cell,
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cell {
+  border: 1px solid #000;
+}
+
+.cell.disabled {
+  background-color: #f0f0f0;
+  pointer-events: none;
+}
+
+.shape.square {
+  border: 1px solid #000;
+}
+
+.shape.square.selected {
+  border: 2px solid blue; /* Change border color when selected */
+}
+
+.shape.circle {
+  background-color: yellow;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.shape.selected {
+  border: 2px solid blue; /* Change border color when selected */
+}
